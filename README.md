@@ -1,4 +1,4 @@
-# Hard_Skill_Case
+# Kanto pokedex API
 Python Pokemon API.
 
 

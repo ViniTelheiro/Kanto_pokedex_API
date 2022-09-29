@@ -49,14 +49,7 @@ class Pokemon():
     
     def show_info(self) -> None:
         print(f'Nº.{self.number}-{self.name}\t type: {", ".join(self.types)}\t abilities: {", ".join(self.ability)}')
-    
-    def get_location(self):
-        area = self.__data['location_area_encounters']
-        request = requests.get(area)
-        area = request.json()
-        for data in area:
-            #print(data['version_details'][-1]['version']['name'])        
-            print(data['version_details'][-1])        
+         
     
     def get_possible_moves(self) -> None:
         all_moves = []
@@ -92,4 +85,14 @@ class Pokemon():
                 moveset.append(str(move).lower().strip())
 
         self.moveset = moveset
-        
+
+
+if __name__ == '__main__':
+    
+    churumela = Pokemon('pikachu')
+    #churumela = Pokemon('Kipachu')
+    #churumela.set_moves(['tackle'])
+    churumela.get_possible_moves()
+    #churumela.set_moves(['swift','reflect','facade','shock-wave','flash'])
+    churumela.set_moves(['swift'])
+    print(churumela.moveset)
