@@ -1,2 +1,7 @@
 # Hard_Skill_Case
-Case of the python internship program.
+Python Pokemon API.
+
+
+
+References:
+pokeAPI: https://pokeapi.co/
